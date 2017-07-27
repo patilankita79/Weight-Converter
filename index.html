@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<style>
+		body {
+			margin-top: 70px;
+			background: #333;
+			color: #fff;
+		}
+	
+	</style>
+	<title>Weight Converter</title>
+</head>
+<body>
+<!--Container pushes everything in the middle -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+			<h1 class="display-4 text-center mb-3">Weight Converter</h1>
+			<!-- Input -->
+			<form>
+				<div class="form-group">
+				<input 
+				 id="lbsInput"
+				 type="number" 
+				 class="form-control form-control-lg" 
+			     placeholder="Enter pounds.."
+				>
+				</div>
+			</form>
+			<!-- Output -->
+			<div id="output">
+				<!-- Card 1 -->
+				<!--Bootstrap class mb-2 gives spacing. It is margin botton -->
+				<div class="card card-primary mb-2">
+				  <div class="card-block">
+				  <h4>Grams:</h4>
+				  <!--We need output for the result, that we will calculate in JavaScript-->
+					<div id ="gramsOutput">
+					</div>
+				  </div>
+				</div>
+				
+				<!-- Card 2 -->
+				<div class="card card-success mb-2">
+				  <div class="card-block">
+				  <h4>Kilorams:</h4>
+				  <!--We need output for the result, that we will calculate in JavaScript-->
+					<div id ="kgOutput">
+					</div>
+				  </div>
+				</div>
+				
+				<!-- Card 3 -->
+				<div class="card card-danger mb-2">
+				  <div class="card-block">
+				  <h4>Ounces:</h4>
+				  <!--We need output for the result, that we will calculate in JavaScript-->
+					<div id ="ozOutput">
+					</div>
+				  </div>
+				</div>
+			
+			</div>
+			</div>
+		</div>
+	
+	</div>
+	<!-- Event Handling with JavaScript -->
+	
+	<script>
+	<!-- Show the cards only if user has given some input -->
+	document.getElementById('output').style.visibility = 'hidden';
+	
+	
+	<!--We want to grab the input, which we have given in the id="lbsInput" and then add event listener for Input event-->
+	document.getElementById('lbsInput').addEventListener('input', function(e){
+	
+	document.getElementById('output').style.visibility = 'visible';
+		//We have to get the value which we are inputting
+		//e is an event parameter
+		let lbs = e.target.value;
+		//console.log(lbs);
+		
+		//we have to get different outputs such as gram, kilogram, ounce.
+		document.getElementById('gramsOutput').innerHTML = (lbs / 0.0022046);
+		//To keep upto 2 decimal places, document.getElementById('gramsOutput').innerHTML = (lbs / 0.0022046).toFixed(2);
+		
+		document.getElementById('kgOutput').innerHTML = (lbs / 2.2046);
+		document.getElementById('ozOutput').innerHTML = (lbs * 16);
+	
+	});
+	</script>
+
+</body>
+</html>
