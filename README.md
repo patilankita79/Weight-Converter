@@ -7,6 +7,6 @@ Simple weight converter web application developed with JavaScript and Bootstrap 
 <li>Application is developed using pure vanilla JavaScript with no JS libraries or frameworks and user interface is developed using Bootstrap 4</li>
 
 <hr>
-
+Search for Bootstrap 4 on <a href="https://v4-alpha.getbootstrap.com/getting-started/introduction/">Bootstap 4 CDN</a> 
 
 
