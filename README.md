@@ -1,4 +1,4 @@
-# Weight Converter
+# WeightConverter
 Simple weight converter web application developed with JavaScript and Bootstrap 4
 <hr>
 <b>Description:</b>
@@ -7,7 +7,11 @@ Simple weight converter web application developed with JavaScript and Bootstrap 
 <li>Application is developed using pure vanilla JavaScript with no JS libraries or frameworks and user interface is developed using Bootstrap 4</li>
 
 <hr>
-Search for Bootstrap 4 on <a href="https://v4-alpha.getbootstrap.com/getting-started/introduction/">Bootstap 4 CDN</a> 
+<b>Bootstrap 4:</b>
+Search on bootstrap cdn <br/>
+Add following bootstrap: <br/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 
 
 
